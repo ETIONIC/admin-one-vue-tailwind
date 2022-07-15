@@ -7,14 +7,18 @@ import { useMainStore } from '@/stores/main.js'
 import { useStyleStore } from '@/stores/style.js'
 import { useLayoutStore } from '@/stores/layout.js'
 import { darkModeKey, styleKey } from '@/config.js'
+import VueViewer from 'v-viewer'
 
+import 'viewerjs/dist/viewer.css'
 import './css/main.css'
 
 /* Init Pinia */
 const pinia = createPinia()
 
 /* Create Vue app */
-createApp(App).use(router).use(pinia).mount('#app')
+const app = createApp(App)
+app.use(router).use(pinia).use(VueViewer)
+app.mount('#app')
 
 /* Init Pinia stores */
 const mainStore = useMainStore(pinia)

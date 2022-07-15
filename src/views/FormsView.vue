@@ -6,6 +6,7 @@ import SectionTitleBar from '@/components/SectionTitleBar.vue'
 import CardBox from '@/components/CardBox.vue'
 import FormCheckRadioPicker from '@/components/FormCheckRadioPicker.vue'
 import FormFilePicker from '@/components/FormFilePicker.vue'
+import InputFile from '@/components/InputFile.vue'
 import SectionHeroBar from '@/components/SectionHeroBar.vue'
 import FormField from '@/components/FormField.vue'
 import FormControl from '@/components/FormControl.vue'
@@ -168,6 +169,7 @@ const submit = () => {
       <BaseDivider />
 
       <FormFilePicker v-model="customElementsForm.file" />
+      <InputFile v-model="customElementsForm.file" />
     </CardBox>
   </SectionMain>
 
